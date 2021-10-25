@@ -189,7 +189,10 @@ void sl_btmesh_lighting_server_on_ui_update(uint16_t lightness_level)
   //           of the LCD:
   //           "Light is Off" when lightness_percent == 0, and
   //           "Light is On"  when lightness_percent == 100
-
+  //           AND
+  //           when lightness_percent ==   0 turn off LED0 and LED1, and
+  //           when lightness_percent == 100 turn on  LED0 and LED1
+  //              using calls to app_led_set_level() from app_led.c
 
 
 
