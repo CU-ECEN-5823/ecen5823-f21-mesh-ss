@@ -353,7 +353,8 @@ static void app_led_blinking_timer_cb(sl_simple_timer_t *handle, void *data)
 
 void sl_btmesh_lighting_level_pwm_cb(uint16_t level)
 {
-  app_led_set_level(level);
+  (void)level; // to avoid compiler warning about unused variable/parameter
+  // DOS app_led_set_level(level);
 }
 
 void sl_btmesh_lighting_color_pwm_cb(uint16_t color)
